@@ -1,0 +1,14 @@
+import gql from 'graphql-tag'
+
+
+const query = gql`query GetQuestion($qid: ID!){
+                                question(id:$qid){
+                                    title
+                                    content
+                                    answers{
+                                        id
+                                        content
+                                    }
+                                }
+                            }`
+export default query;
